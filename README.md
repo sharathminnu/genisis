@@ -145,3 +145,25 @@ sudo umount Mountpoint
 
 By typing ls command in qemu we can see a.out file 
 then type ./a.out in qemu to get output of the file
+
+
+## OUT TREE KERNEL
+
+* out tree kernel is nothing but modules which are developed outside the source kernel
+* some commands used 
+```
+insmod -> which is used to insert the module
+rmmod -> which is used to remove the module
+lsmod -> it lists the loaded modules
+dmesg -> lists the log of messages
+dmeseg ->lists the log of messages and clears the log
+```
+## IN TREE KERNEL
+
+## Dynamic Module
+* Dynamic module is nothing but it can load and unload at runtime
+* when we copy the kernel output to target board we can load the modules using ```insmod``` and can be unloaded with ```rmmod```
+
+## Static MOdule 
+* These are quite opposite to dynamic modules. 
+* Static modules present within the kernel if we want we can enable and disable it but we can not load unload  like dynamic modules
