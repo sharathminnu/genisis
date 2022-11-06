@@ -133,3 +133,14 @@ ls
 ```
 
 * Now, you will see the output in the terminal.
+ ##  Mount Method
+* create a mounting named folder in images
+* copy the a.out file to mounting/home/root/
+* Unmount after copying
+
+sudo mount rootfs.img mounting/
+sudo cp a.out mounting/home/root
+sudo umount mounting
+
+By typing ls command in qemu we can see a.out file 
+then type ./a.out in qemu to get output of the file
