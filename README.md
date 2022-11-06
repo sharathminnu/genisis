@@ -87,7 +87,13 @@ qemu-system-arm -M vexpress-a9 -nographic -kernel zimage -dtb vexpess-v2p-ca9.dt
 * Now type this command to now the version of Qemu 
 ```
 uname -r
-umane -v
+uname -v
+
+```
+
+* command to know the login info 
+```
+uname -a
 ```
 
 ## Running program in Qemu 
