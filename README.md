@@ -1,6 +1,6 @@
 # Mastering Linux Kernal Programming & Device Drivers
 
-## `INTRODUCTION`
+## INTRODUCTION
 * Initiated by Linus Torvalds as a hobby project in 1991
 * Inspired by Minix OS designed by Andrew S Tanenbaum
 * Popular kernal for Free and Open Source Operating System, e.g. GNU Linux
