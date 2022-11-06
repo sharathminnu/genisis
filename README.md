@@ -156,7 +156,7 @@ insmod -> which is used to insert the module
 rmmod -> which is used to remove the module
 lsmod -> it lists the loaded modules
 dmesg -> lists the log of messages
-dmeseg ->lists the log of messages and clears the log
+dmesg -c ->lists the log of messages and clears the log
 ```
 ## IN TREE KERNEL
 
