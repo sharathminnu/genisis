@@ -167,3 +167,40 @@ dmesg -c ->lists the log of messages and clears the log
 ## Static Module 
 * These are quite opposite to dynamic modules. 
 * Static modules present within the kernel if we want we can enable and disable it but we can not load unload  like dynamic modules
+
+## Core Dumps
+* core dump files contatins the information why the program crashes
+* Generally core dump files are generated due to segmentation faults
+* To enable core dumps, first check the maximum core dump size ``` ulimit -c```
+* If the result of this is zero set the limit to the maximum ```ulimit -c unlimited```
+* ```ulimit -a``` used to check sizes of all features
+* A core dump will now be generated and placed in the location specified by /proc/sys/kernel/core_pattern
+* we can modifiy the path of core dumped files
+```
+echo "<desired-file-path>/<desired-file-name>" > /proc/sys/kernel/core_pattern
+for ex: echo /var/crash/core-%e > /proc/sys/kernel/core_pattern
+```
+* Here %e is for excutable files
+* you can also use ```man core``` so that which file you want to save
+* Now after changing the run any program which generates the segmentation fault
+```
+compile -> gcc -g filename.c -o filename
+run -> ./filename
+```
+* Now you check ```ls /var/crash/``` a core dump file will be generated
+* Ater that you can start debugging with gdb
+```
+gdb binary-file core-dumpfile
+```
+## OOPS Crash
+
+```
+arm-linux-gnueabi-addr2line -f pc value -e filename.ko
+```
+* it gives information at which line programe is failing
+* Or insted of Address to line we can go with gdb
+```
+arm-linux-gnueabi-gdb filename.o
+```
+
+
