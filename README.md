@@ -164,6 +164,6 @@ dmesg -c ->lists the log of messages and clears the log
 * Dynamic module is nothing but it can load and unload at runtime
 * when we copy the kernel output to target board we can load the modules using ```insmod``` and can be unloaded with ```rmmod```
 
-## Static MOdule 
+## Static Module 
 * These are quite opposite to dynamic modules. 
 * Static modules present within the kernel if we want we can enable and disable it but we can not load unload  like dynamic modules
