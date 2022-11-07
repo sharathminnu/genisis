@@ -106,7 +106,10 @@ gcc-arm-linux-gnueabi filename.c
 
 * It will generate a a.out which will only excute in arm architecture
 
-* Now, we are transfering the file using the Network 
+* Now, we are transfering the file using the Network or Mount Method
+
+## Network Method
+
 * In your folder where output file is generated, type the following command
 ```
 ifconfig
@@ -133,7 +136,8 @@ ls
 ```
 
 * Now, you will see the output in the terminal.
- ##  Mount Method
+
+##  Mount Method
 * create a mounting named folder in images
 * copy the a.out file to MountPoint/home/root/
 * Unmount after copying
