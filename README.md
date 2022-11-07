@@ -309,6 +309,34 @@ run -> ./filename
 ```
 gdb binary-file core-dumpfile
 ```
+
+# Kernel Debugging Methods
+
+## Kernel logging with printk
+
+* printk is a C function from the Linux kernel interface that prints messages to the kernel log.
+* prink supports various log levels. These loglevels indicate the significance of the message being logged.
+* checkout this link for loglevels (https://www.oreilly.com/library/view/linux-kernel-in/0596100795/re06.html)
+* To view log settings login to qemu and type
+```
+$ cat /proc/sys/kernel/printk
+4   4   1   7
+```
+* 1st field shows the current loglevel
+* 2nd field shows default log level
+* 3rd field shows minimum number of loglevel kernel supports
+* 4th field shows maximum number of loglevel kernel supports
+## Changing loglevels
+* There are different ways to chang loglevels
+* 1.Modify the /proc entry
+```$ echo 6 > /proc/sys/kernel/printk```
+* 2.dmesg
+* ``` dmesg -n 6```
+* 3. sysrq file
+* ``` echo 4 > /proc.sysrq-trigger```
+* These are different methods to change loglevels
+* Remember kernel supports upto 7 loglevels.
+
 ## OOPS Crash
 
 ```
