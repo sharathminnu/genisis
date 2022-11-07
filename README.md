@@ -150,13 +150,36 @@ then type ./a.out in qemu to get output of the file
 ## OUT TREE KERNEL
 
 * out tree kernel is nothing but modules which are developed outside the source kernel
-* some commands used 
+* create one folder outside the kernel directory then write a program as shown below
 ```
-insmod -> which is used to insert the module
-rmmod -> which is used to remove the module
-lsmod -> it lists the loaded modules
-dmesg -> lists the log of messages
-dmesg -c ->lists the log of messages and clears the log
+#include <linux/init.h>
+#include <linux/module.h>
+#include <linux/kernel.h>
+static int __init hello_init(void){
+   printk("Hello World..welcome\n");
+   return 0;
+}
+static void __exit hello_exit(void){
+   printk("Bye,Leaving the world\n");
+}
+module_init(hello_init);
+module_exit(hello_exit);
+MODULE_LICENCE("GPL")
+MODULE_AUTHOR("SHARATH");
+MODULE_DESCRIPTION("A simple module");
+```
+* Now write a Makefile to compile and run the program 
+* Make sure you CROSS COMPILE the program with this command ```ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-```
+* Now after running the program you will get ```.ko``` file which means kernel output.
+* Now copy this .ko file to target kernel either by using Mount Method or Network Method.
+* After this login to Qemu when you do ls you will find .ko file.
+* you can run this by using following commands.
+```
+insmod    -> which is used to insert the module
+rmmod     -> which is used to remove the module
+lsmod     -> it lists the loaded modules
+dmesg     -> lists the log of messages
+dmesg -c  ->lists the log of messages and clears the log
 ```
 ## IN TREE KERNEL
 
