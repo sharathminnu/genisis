@@ -13,7 +13,7 @@
 * Supported Languages - C and Assembly
 
 ## `Defining our Kernel`
-At first, we have to download kernel from ![kernel.org](https://kernel.org/) version 6.0.6.
+At first, we have to download kernel from (https://kernel.org/) version 6.0.6.
 
 * Create a clean Workspace
 * Don't use Desktop,Downloads,Documents,Music,Videos,Pictures etc,which are meant for other purpose.
