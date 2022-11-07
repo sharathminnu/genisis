@@ -187,6 +187,9 @@ dmesg -c  -> lists the log of messages and clears the log
 ```
 ## IN TREE KERNEL
 
+* In tree kernel is nothing but we make changes or write programs with in the kernel.
+* After making changes we have to rebuid the kernel to reflect the changes.
+
 ## Dynamic Module
 * Dynamic module is nothing but it can load and unload at runtime
 * when we copy the kernel output to target board we can load the modules using ```insmod``` and can be unloaded with ```rmmod```
