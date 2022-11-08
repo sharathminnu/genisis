@@ -12,7 +12,7 @@
 * Upstream(mainline) and Downstream kernel
 * Supported Languages - C and Assembly
 
-## `Defining our Kernel`
+## Defining our Kernel
 At first, we have to download kernel from (https://kernel.org/) version 6.0.6.
 
 * Create a clean Workspace
